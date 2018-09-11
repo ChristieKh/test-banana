@@ -10,6 +10,7 @@ body {
     font-family: 'Ubuntu', Arial, sans-serif;
     color: #5F5F5F;
     font-style: normal;
+    font-weight: 400;
     background-color: var(--color-text);
 }
 
@@ -18,65 +19,120 @@ img {
     height: auto;
 }
 
-h1, h2, p {
+h1, h2, h3, p, a {
     margin: 0;
     padding: 0;
 }
 
-.flex_container {
+ul {
+    list-style: none;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 80px 0 75px;
 }
 
-.flex_container_header {
+.container_header {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 24px;
 }
 
-.flex_container_body {
+.container_body {
     display: flex;
     justify-content: space-between;
 }
 
-.flex_container_footer {
+.container_footer {
     display: flex;
 }
 
-.header .hello {
+.hello .container_header {
     margin-bottom: 40px;
     font-size: 16px;
 }
 
-.header .hello h1 {
+.hello .container_header h1 {
     font-size: 18px;
     font-weight: 400;
 }
 
-.header .nav {
-    text-align: center;
+.hello .container_body {
     margin-bottom: 35px;
     padding-bottom: 35px;
     border-top: #f4dc00 solid 3px;
     border-bottom: #f4dc00 solid 3px;
 }
 
-.header .text {
+.hello .container_body ul {
+    display: flex;
+    flex-direction: row;    
+    text-align: center;
+}
+
+.hello .container_body li {
+    padding-top: 142px;
+   
+} 
+
+.hello .container_body li::before {
+position: absolute;
+    content: "";
+    width: 120px;    
+    height: 115px;
+}
+
+.hello .container_body li:first-child::before {
+    background: rgba(218, 23, 23, 0.2) url(./img/sprite2.png) no-repeat center;
+    background-position: 0px 0px;
+    top: 120px;
+    left: 190px;
+    background-size: 651px 239px;
+}
+
+.hello .container_body li:nth-child(2)::before {
+    background: rgba(218, 23, 23, 0.2) url(./img/sprite2.png) no-repeat center;
+    background-position: -125px 0px;
+    top: 120px;
+    left: 490px;
+    background-size: 651px 239px;
+}
+
+.hello .container_body li:nth-child(3)::before {
+    background: rgba(218, 23, 23, 0.2) url(./img/sprite2.png) no-repeat center;
+    background-position: -250px 0px;
+    top: 120px;
+    left: 699px;
+    background-size: 651px 239px;
+    width: 226px;
+}
+
+.hello .container_body li:last-child::before {
+    background: rgba(218, 23, 23, 0.2) url(./img/sprite2.png) no-repeat center;
+    background-position: -487px 0px;
+    top: 120px;
+    left: 1029px;
+    background-size: 651px 239px;
+}
+
+.hello .container_footer {
     padding-bottom: 55px;
 }
 
-.organizer h2 {
+.organizer .container_header {
     margin-bottom: 30px;
 }
 
-.organizer .answers {
+.organizer .container_body {
     margin: 0 77px 0 82px;
+    color: #fff;
 }
 
-.answers .column {
+.organizer .container_body .column {
     display: flex;
     flex-direction: column;
     width: 38.09%;
@@ -93,42 +149,169 @@ h1, h2, p {
 
 .column .bottom-topic {
     padding: 90px 25px 30px 25px;
+    background: url(img/evelina-friman-339606.jpg) no-repeat;
+    background-position: 0px -320px;
+    background-size: 400px 500px;
+    box-shadow: 0 0 0 300px rgba(0, 0, 0, 0.33) inset;
 }
 
-.answers .topic-2, .topic-3 {
+.container_body .topic-2, .topic-3 {
     box-sizing: border-box;
     margin-right: 30px;
     padding: 117px 15px 55px 18px;
     width: 27.5%;
+    box-shadow: 0 0 0 300px rgba(0, 0, 0, 0.33) inset;
 }
 
-.answers .topic-3 {
+.container_body .topic-2 {
+    background: url(img/drew-coffman-100876.jpg) no-repeat;
+    background-position: 0px -40px;
+    background-size: 500px 350px;
+}
+
+.container_body .topic-3 {
     margin: 0;
     padding-right: 45px;
+    background-image: url(img/tessa-rampersad-346634.jpg),
+    url(img/3.jpg);
+    background-repeat: no-repeat;
+    background-position: -100px 0px, -100px 0px;
+    background-size: 470px 350px, 470px 350px;
 }
 
-.organizer .flex_container_footer {
+.organizer .container_footer {
     margin-bottom: 55px;
 }
 
-.coordinator .flex_container_header {
+.coordinator .container_header {
     margin-bottom: 30px;
 }
 
-.coordinator .flex_container_body {
+.coordinator .container_body, 
+.best-organizer .container_body {
     flex-direction: column;
 }
 
-.coordinator .flex_container_body ul {
+.coordinator .container_body ul {
     margin: 0;
     padding: 35px 77px 0 82px;
-    list-style: none;
 }
 
-.coordinator .flex_container_body li {
+.coordinator .container_body li {
     padding: 0 0 25px 0;
 }
 
-.coordinator .flex_container_footer {
+.coordinator .container_footer {
     margin-bottom: 60px;
+}
+
+.best-organizer .container_header {
+    margin-bottom: 35px;
+}
+
+.best-organizer .container_body {
+    margin-bottom: 52px;
+}
+
+.best-organizer .container_body .person {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 26px 315px 30px 52px;
+    background-color: #fff9c2;
+}
+
+.best-organizer .container_footer {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.contacts {
+    width: 1104px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    background: #c489a1 url(img/flower.jpg) no-repeat;
+    background-position: -120px -350px;
+    background-size: 1500px 1000px;
+    color: #fff;
+    text-align: center;
+}
+
+.contacts h3 {
+    padding-bottom: 40px;
+    font-weight: 300;
+}
+
+.contacts p {
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+
+.contacts span {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.contacts span:last-child {
+    padding-bottom: 30px;
+}
+
+.resume {
+    width: 100%;
+    padding-bottom: 25px; 
+    background-color: #ededed;
+    color: #1d1d1d;
+}
+
+.resume .container_header {
+    padding: 20px;
+    margin: 25px 0 35px 0;
+    background-color: #ffeb3a;
+}
+
+
+.resume .container_body {
+    display: flex;
+    justify-content: center;
+}
+
+.resume .container_body p {
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.resume .container_body ul {
+    height: 200px;
+}
+
+.resume .container_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffec3b;
+    text-align: center;
+}
+
+.resume .container_footer p {
+    padding: 55px 0 30px 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.resume .container_footer span {
+    padding-bottom: 35px;
+}
+
+.resume .container_footer a {
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #000;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 40px;
 }

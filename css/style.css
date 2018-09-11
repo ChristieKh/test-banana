@@ -1,0 +1,165 @@
+.root {
+    --color-text: #5F5F5F;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 27px;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    color: #5F5F5F;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--color-text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 80px 0 75px;
+}
+
+.container_header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+}
+
+.container_body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_footer {
+    display: flex;
+}
+
+.hello .container_header {
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.hello .container_header h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hello .container_body {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 35px;
+    border-top: #f4dc00 solid 3px;
+    border-bottom: #f4dc00 solid 3px;
+}
+
+.hello .container_footer {
+    padding-bottom: 55px;
+}
+
+.organizer .container_header {
+    margin-bottom: 30px;
+}
+
+.organizer .container_body {
+    margin: 0 77px 0 82px;
+}
+
+.organizer .container_body .column {
+    display: flex;
+    flex-direction: column;
+    width: 38.09%;
+    margin-right: 30px;
+}
+
+.column .top-topic {
+    margin-bottom: 31px;
+    padding: 25px 0 25px 18px;
+    color: #fff;
+    background-color: #f4dc00;
+    font-size: 20px;
+}
+
+.column .bottom-topic {
+    padding: 90px 25px 30px 25px;
+}
+
+.container_body .topic-2, .topic-3 {
+    box-sizing: border-box;
+    margin-right: 30px;
+    padding: 117px 15px 55px 18px;
+    width: 27.5%;
+}
+
+.container_body .topic-3 {
+    margin: 0;
+    padding-right: 45px;
+}
+
+.organizer .container_footer {
+    margin-bottom: 55px;
+}
+
+.coordinator .container_header {
+    margin-bottom: 30px;
+}
+
+.coordinator .container_body, 
+.best-organizer .container_body {
+    flex-direction: column;
+}
+
+.coordinator .container_body ul {
+    margin: 0;
+    padding: 35px 77px 0 82px;
+    list-style: none;
+}
+
+.coordinator .container_body li {
+    padding: 0 0 25px 0;
+}
+
+.coordinator .container_footer {
+    margin-bottom: 60px;
+}
+
+.best-organizer .container_header {
+    margin-bottom: 35px;
+}
+
+.best-organizer .container_body {
+    margin-bottom: 52px;
+}
+
+.best-organizer .container_body .person {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 26px 315px 30px 52px;
+    background-color: #fff9c2;
+}
+
+.best-organizer .container_footer {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.contacts {
+    width: 1104px;
+    margin: 0 auto;
+    padding: 0;
+    background: #c489a1 url(img/flower.jpg) no-repeat;
+
+}ss
