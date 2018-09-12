@@ -76,11 +76,11 @@ ul {
 
 .hello .container_body li {
     padding-top: 142px;
-   
+
 } 
 
 .hello .container_body li::before {
-position: absolute;
+    position: absolute;
     content: "";
     width: 120px;    
     height: 115px;
@@ -128,7 +128,7 @@ position: absolute;
 }
 
 .organizer .container_body {
-    margin: 0 77px 0 82px;
+    margin: 0 77px 40px 82px;
     color: #fff;
 }
 
@@ -175,8 +175,8 @@ position: absolute;
     background-image: url(img/tessa-rampersad-346634.jpg),
     url(img/3.jpg);
     background-repeat: no-repeat;
-    background-position: -100px 0px, -100px 0px;
-    background-size: 470px 350px, 470px 350px;
+    background-position: -100px 0px;
+    background-size: 470px 350px;
 }
 
 .organizer .container_footer {
@@ -198,9 +198,22 @@ position: absolute;
 }
 
 .coordinator .container_body li {
-    padding: 0 0 25px 0;
+        padding: 0 0 25px 0;
 }
 
+/*.coordinator .container_body li::before {
+    position: absolute;
+    content: "";
+    width: 25px;    
+    height: 25px;
+    background: rgba(218, 23, 23, 0.2) url(./img/sprite2.png) no-repeat center;
+    background-position: 88px 31px;
+    left: 53px;
+    background-size: 651px 239px;
+}*/
+.color_yellow {
+    color: #ffec3b;
+}
 .coordinator .container_footer {
     margin-bottom: 60px;
 }
@@ -218,7 +231,18 @@ position: absolute;
     flex-direction: row;
     margin-top: 50px;
     padding: 26px 315px 30px 52px;
+    position: relative;
     background-color: #fff9c2;
+}
+
+.best-organizer .container_body .person img {
+    width: 195px;
+    height: 200px;
+    position: absolute;
+    border-radius: 100%;
+    border: 6px solid #ffec3b;
+    right: 50px;
+    top: -30px;
 }
 
 .best-organizer .container_footer {
@@ -274,6 +298,7 @@ position: absolute;
 .resume .container_body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .resume .container_body p {
@@ -314,4 +339,25 @@ position: absolute;
     padding: 10px;
     width: 300px;
     margin-bottom: 40px;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.item{
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    background-color: #aeaeae;
+    flex-basis: 25%;
+}
+
+.item:hover {
+    flex-basis: 50%;
 }
